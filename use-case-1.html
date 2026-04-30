@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Case 2 — NexusRWE</title>
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+        :root {
+            --teal:      #29A8A3; --teal-dk:   #1b7e7a; --teal-xdk:  #104c49;
+            --teal-lt:   #d0f0ee; --teal-xlt:  #edfaf9; --purple:    #6B5AB8;
+            --purple-dk: #4e3f8e; --purple-lt: #e2ddf5; --purple-xlt:#f2f0fc;
+            --grad:      linear-gradient(90deg, #29A8A3 0%, #6B5AB8 100%);
+            --grad-v:    linear-gradient(145deg, #29A8A3 0%, #6B5AB8 100%);
+            --bg:        #f7f8fc; --white:     #ffffff; --text:      #0d1a2a;
+            --text-2:    #1e2e40; --text-3:    #3a5060; --border:    #dde4f0;
+        }
+        html { scroll-behavior:smooth; }
+        body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-size:18px; font-weight:400; line-height:1.75; }
+        
+        /* NAV */
+        nav {
+            position:fixed; top:0; left:0; right:0; z-index:100;
+            display:flex; align-items:center; justify-content:space-between;
+            padding:0.4rem 3.5rem; background:rgba(255,255,255,0.97);
+            backdrop-filter:blur(10px); border-bottom:1px solid var(--border);
+            box-shadow:0 1px 16px rgba(0,0,0,0.07);
+        }
+        .nav-logo img { height:110px; display:block; }
+        .nav-links { display:flex; gap:2rem; align-items:center; }
+        .nav-links a {
+            font-family:'Space Mono',monospace; font-size:0.85rem;
+            letter-spacing:0.08em; text-transform:uppercase;
+            color:var(--text-3); text-decoration:none; transition:color 0.2s;
+        }
+        .nav-links a:hover { color:var(--teal); }
+        .nav-cta {
+            background:var(--grad) !important; color:#fff !important;
+            padding:0.55rem 1.4rem; border-radius:4px; font-weight:700 !important;
+            transition:opacity 0.2s !important;
+        }
+        .nav-cta:hover { opacity:0.85 !important; }
+        
+        section { padding:6rem 3.5rem; }
+        .max-w { max-width:1100px; margin:0 auto; }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION (now properly included) -->
+<nav>
+    <div class="nav-logo">
+        <img src="nexusIcon.png" alt="NexusRWE">
+    </div>
+    <div class="nav-links" style="margin-left:auto;">
+        <a href="index.html">Home</a>
+        <a href="index.html#how">How it Works</a>
+        <a href="use-case-2.html">Use Case 2</a>
+        <a href="https://docs.google.com/forms/d/1RJOTHhJAT2mv4seBjMcL0PbOT0lPNAH2dz4hha_eQss/viewform" target="_blank" class="nav-cta">Schedule a Call</a>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT (gradient background) -->
+<main style="margin-top:160px; background: linear-gradient(145deg, #29A8A3 0%, #6B5AB8 100%); color: white; padding: 6rem 3.5rem 8rem;">
+    <div class="max-w" style="max-width:1100px; margin:0 auto;">
+        
+        <h1 style="font-size:2.8rem; line-height:1.2; text-align:center; margin-bottom:1rem;">
+            Use Case 1: A Post-Market Safety Study 
+        </h1>
+        <p style="text-align:center; font-size:1.25rem; opacity:0.9; margin-bottom:4rem;">
+            Built for ICH M14           
+        </p>
+
+        <div style="background:rgba(255,255,255,0.12); border-radius:16px; padding:3rem; max-width:900px; margin:0 auto;">
+            <h2 style="font-size:1.5rem; margin-bottom:1.5rem;">The situation</h2>
+            <p style="margin-bottom:2rem;">A pharma sponsor has a cardiovascular drug on the market. Spontaneous reports suggest a possible elevated stroke risk in patients over seventy-five. Under ICH M14, the sponsor needs a structured pharmacoepidemiological study across multiple health systems that is fast, defensible, and submission-ready.</p>
+
+            <h2 style="font-size:1.5rem; margin-bottom:1.5rem;">The conventional path</h2>
+
+            <p style="margin-bottom:2rem;">Identify five hospital systems. Negotiate a data use agreement with each. Sign HIPAA business associate agreements. Wait for IRB approvals. Export de-identified EHR extracts to a centralized analytic environment. Run the analysis. Repackage findings into eCTD format manually. Twelve to thirty months elapsed. Seven figures spent. Patient data sitting outside the institutions where it was generated.</p>
+
+            <h2 style="font-size:1.5rem; margin-bottom:1.5rem;">The NexusRWE model</h2>
+            <p style="margin-bottom:2rem;">The protocol is submitted as a code-signed query artifact. Each hospital reviews and approves through its own governance. The approved query executes locally inside a hardware-attested sandbox at each site. Differential privacy budgets are tracked across sites and time. Aggregate results return, hash-linked to their source. The system assembles a CDISC-compliant clinical study report and an eCTD-ready submission package automatically.</p>
+
+            <h2 style="font-size:1.5rem; margin-bottom:1.5rem;">The outcome</h2>
+            <p>Submission-ready evidence in months, not years. No patient data ever leaves the hospital. Every step is auditable, attributable, and traceable to its source. The sponsor submits. The patients stay home.</p>
+        </div>
+
+        <!-- div style="margin-top:4rem; text-align:center;">
+            <a href="index.html" style="display:inline-block; background:white; color:#0d1a2a; padding:1rem 2rem; border-radius:8px; font-weight:700; text-decoration:none; font-family:'Space Mono',monospace; letter-spacing:0.08em; text-transform:uppercase;">← Back to NexusRWE Home</a>
+        </div -->
+    </div>
+</main>
+
+<!-- FOOTER — Paste your footer here if you want it (optional for now) -->
+
+</body>
+</html>
