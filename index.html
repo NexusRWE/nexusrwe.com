@@ -102,6 +102,7 @@ nav {
   color:var(--text-3); text-decoration:none; transition:color 0.2s;
 }
 .nav-links a:hover { color:var(--teal); }
+.nav-links a.active { color:var(--teal); font-weight:700; }
 .nav-cta {
   background:var(--grad) !important; color:#fff !important;
   padding:0.55rem 1.4rem; border-radius:4px; font-weight:700 !important;
@@ -622,6 +623,34 @@ function showTab(tabId, btn) {
   document.getElementById(tabId).classList.add('active');
   btn.classList.add('active');
 }
+
+(function() {
+  var sectionIds = ['problem', 'how', 'pharma', 'hospitals', 'team'];
+  var navLinks = {};
+  sectionIds.forEach(function(id) {
+    var link = document.querySelector('.nav-links a[href="#' + id + '"]');
+    if (link) navLinks[id] = link;
+  });
+
+  var activeId = null;
+  function setActive(id) {
+    if (id === activeId) return;
+    activeId = id;
+    Object.values(navLinks).forEach(function(l) { l.classList.remove('active'); });
+    if (id && navLinks[id]) navLinks[id].classList.add('active');
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+
+  sectionIds.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+})();
 </script>
 
 </body>
