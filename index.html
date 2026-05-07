@@ -501,14 +501,13 @@ footer p { font-size:0.78rem; color:var(--text-3); }
         <div style="margin-top:3rem; padding:2.5rem; border-radius:16px; background:linear-gradient(145deg, #29A8A3 0%, #6B5AB8 100%); color:#fff;">
           <p style="font-family:'Space Mono',monospace; font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase; opacity:0.85; margin-bottom:0.5rem;">Use Case 1 &middot; Built for ICH M14</p>
           <h3 style="font-size:1.6rem; line-height:1.25; margin-bottom:1.5rem; color:#fff;">A Post-Market Safety Study</h3>
-          <h4 style="font-size:1.1rem; margin-bottom:0.6rem; color:#fff;">The situation</h4>
-          <p style="margin-bottom:1.5rem; color:rgba(255,255,255,0.92);">A pharma sponsor has a cardiovascular drug on the market. Spontaneous reports suggest a possible elevated stroke risk in patients over seventy-five. Under ICH M14, the sponsor needs a structured pharmacoepidemiological study across multiple health systems that is fast, defensible, and submission-ready.</p>
-          <h4 style="font-size:1.1rem; margin-bottom:0.6rem; color:#fff;">The conventional path</h4>
-          <p style="margin-bottom:1.5rem; color:rgba(255,255,255,0.92);">Identify five hospital systems. Negotiate a data use agreement with each. Sign HIPAA business associate agreements. Wait for IRB approvals. Export de-identified EHR extracts to a centralized analytic environment. Run the analysis. Repackage findings into eCTD format manually. Twelve to thirty months elapsed. Seven figures spent. Patient data sitting outside the institutions where it was generated.</p>
-          <h4 style="font-size:1.1rem; margin-bottom:0.6rem; color:#fff;">The NexusRWE model</h4>
-          <p style="margin-bottom:1.5rem; color:rgba(255,255,255,0.92);">The protocol is submitted as a code-signed query artifact. Each hospital reviews and approves through its own governance. The approved query executes locally inside a hardware-attested sandbox at each site. Differential privacy budgets are tracked across sites and time. Aggregate results return, hash-linked to their source. The system assembles a CDISC-compliant clinical study report and an eCTD-ready submission package automatically.</p>
-          <h4 style="font-size:1.1rem; margin-bottom:0.6rem; color:#fff;">The outcome</h4>
-          <p style="color:rgba(255,255,255,0.92);">Submission-ready evidence in months, not years. No patient data ever leaves the hospital. Every step is auditable, attributable, and traceable to its source. The sponsor submits. The patients stay home.</p>
+          <h4 style="font-size:1.1rem; margin-bottom:0.6rem; color:#fff;">What this looks like in practice</h4>
+          <p style="margin-bottom:1.5rem; color:rgba(255,255,255,0.92);">A pharma sponsor has a cardiovascular drug on the market. Spontaneous reports suggest elevated stroke risk in patients over 75. Under ICH M14, they need a structured pharmacoepidemiological study across multiple health systems - fast, defensible, and submission-ready.</p>
+          <h4 style="font-size:1.1rem; margin-bottom:0.6rem; color:#fff;">The old way</h4>
+          <p style="margin-bottom:1.5rem; color:rgba(255,255,255,0.92);">Negotiate data use agreements with five hospital systems. Sign HIPAA agreements. Wait for IRB approvals. Export patient records to a central server. Run the analysis. Reformat everything manually for submission. That's 12 to 30 months and seven figures spent - with patient data sitting outside the hospitals where it was generated.</p>
+          <h4 style="font-size:1.1rem; margin-bottom:0.6rem; color:#fff;">With NexusRWE</h4>
+          <p style="margin-bottom:1.5rem; color:rgba(255,255,255,0.92);">The sponsor submits a locked study protocol. Each hospital approves it through their own governance process. The analysis runs locally inside each hospital - patient data never moves. When the privacy budget is spent, the system stops automatically. Encrypted results are returned - each one traceable to its source. The platform generates a submission-ready evidence package automatically.</p>
+          <p style="color:rgba(255,255,255,0.92);">Months, not years. No data ever leaves the hospital. Every step is auditable and traceable.</p>
         </div>
 
         <a href="use-case-1.html" style="display:block; margin-top:1.5rem; text-decoration:none; color:inherit;">
