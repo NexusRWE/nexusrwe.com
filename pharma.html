@@ -15,17 +15,16 @@
 <style>
 *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
 :root {
-  --teal:      #29A8A3; --teal-dk:   #1b7e7a; --teal-xdk:  #104c49;
-  --teal-lt:   #d0f0ee; --teal-xlt:  #edfaf9; --purple:    #6B5AB8;
-  --purple-dk: #4e3f8e; --purple-lt: #e2ddf5; --purple-xlt:#f2f0fc;
-  --grad:      linear-gradient(90deg, #29A8A3 0%, #6B5AB8 100%);
-  --grad-v:    linear-gradient(145deg, #29A8A3 0%, #6B5AB8 100%);
-  --bg:        #f7f8fc; --white:     #ffffff; --text:      #0d1a2a;
-  --text-2:    #1e2e40; --text-3:    #3a5060; --border:    #dde4f0;
+  --teal:#29A8A3; --teal-dk:#1b7e7a; --teal-xdk:#104c49;
+  --teal-lt:#d0f0ee; --teal-xlt:#edfaf9; --purple:#6B5AB8;
+  --purple-dk:#4e3f8e; --purple-lt:#e2ddf5; --purple-xlt:#f2f0fc;
+  --grad:linear-gradient(90deg,#29A8A3 0%,#6B5AB8 100%);
+  --grad-v:linear-gradient(145deg,#29A8A3 0%,#6B5AB8 100%);
+  --bg:#f7f8fc; --white:#ffffff; --text:#0d1a2a;
+  --text-2:#1e2e40; --text-3:#3a5060; --border:#dde4f0;
 }
 html { scroll-behavior:smooth; }
 body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; font-size:18px; font-weight:400; line-height:1.75; }
-
 nav {
   position:fixed; top:0; left:0; right:0; z-index:100;
   display:flex; align-items:center; justify-content:space-between;
@@ -35,72 +34,50 @@ nav {
 }
 .nav-logo img { height:110px; display:block; }
 .nav-links { display:flex; gap:2rem; align-items:center; }
-.nav-links a {
-  font-family:'Space Mono',monospace; font-size:0.85rem;
-  letter-spacing:0.08em; text-transform:uppercase;
-  color:var(--text-3); text-decoration:none; transition:color 0.2s;
-}
+.nav-links a { font-family:'Space Mono',monospace; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-3); text-decoration:none; transition:color 0.2s; }
 .nav-links a:hover { color:var(--teal); }
 .nav-links a.active { color:var(--teal); font-weight:700; }
-.nav-cta {
-  background:var(--grad) !important; color:#fff !important;
-  padding:0.55rem 1.4rem; border-radius:4px; font-weight:700 !important;
-  transition:opacity 0.2s !important;
-}
+.nav-cta { background:var(--grad) !important; color:#fff !important; padding:0.55rem 1.4rem; border-radius:4px; font-weight:700 !important; transition:opacity 0.2s !important; }
 .nav-cta:hover { opacity:0.85 !important; }
-
-.btn {
-  font-family:'Space Mono',monospace;
-  font-size:0.82rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700;
-  padding:1rem 2.2rem; border-radius:4px;
-  text-decoration:none; display:inline-block;
-  transition:all 0.18s; border:none; cursor:pointer; white-space:nowrap;
-}
+.btn { font-family:'Space Mono',monospace; font-size:0.82rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700; padding:1rem 2.2rem; border-radius:4px; text-decoration:none; display:inline-block; transition:all 0.18s; border:none; cursor:pointer; white-space:nowrap; }
 .btn-grad { background:var(--grad); color:#fff; box-shadow:0 4px 16px rgba(41,168,163,0.22); }
 .btn-grad:hover { opacity:0.88; transform:translateY(-2px); }
-
 section { padding:6rem 3.5rem; }
 .max-w { max-width:1100px; margin:0 auto; }
-.section-label {
-  font-family:'Space Mono',monospace; font-size:0.82rem;
-  letter-spacing:0.12em; text-transform:uppercase;
-  margin-bottom:0.9rem; display:flex; align-items:center; gap:0.65rem;
-}
-.grad-text {
-  background:var(--grad);
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-}
-.grad-line {
-  display:inline-block; width:2.8rem; height:2px;
-  background:var(--grad); border-radius:1px; flex-shrink:0;
-}
-h2 {
-  font-family:'DM Serif Display',serif;
-  font-size:clamp(2rem,3vw,2.85rem); color:var(--text);
-  line-height:1.2; margin-bottom:1.4rem;
-}
-p { color:var(--text-2); }
-.sub { color:var(--text-2); margin-bottom:2rem; }
-
-.audiences-section { background:var(--white); border-top:1px solid var(--border); padding-top:10rem; }
-.use-cases { margin:1.8rem 0 2rem; }
-.use-case-list { display:flex; flex-direction:column; gap:0.75rem; }
+.section-label { font-family:'Space Mono',monospace; font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.9rem; display:flex; align-items:center; gap:0.65rem; }
+.grad-text { background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.grad-line { display:inline-block; width:2.8rem; height:2px; background:var(--grad); border-radius:1px; flex-shrink:0; }
+h1 { font-family:'DM Serif Display',serif; font-size:clamp(2.4rem,4vw,3.6rem); line-height:1.15; color:var(--text); margin-bottom:1.4rem; }
+h2 { font-family:'DM Serif Display',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); color:var(--text); line-height:1.2; margin-bottom:1rem; margin-top:2.5rem; }
+h2:first-of-type { margin-top:0; }
+p { color:var(--text-2); margin-bottom:1.1rem; }
+p:last-of-type { margin-bottom:0; }
+.intro-section { background:var(--white); border-top:1px solid var(--border); padding-top:10rem; padding-bottom:0; }
+.main-section { background:var(--white); padding-top:3rem; }
+.use-case-list { display:flex; flex-direction:column; gap:0.75rem; margin:1.5rem 0 2.5rem; }
 .use-case-item { display:flex; align-items:flex-start; gap:0.85rem; font-size:1rem; color:var(--text-2); }
 .uc-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:0.45rem; background:var(--grad); }
-
-footer {
-  background:#ffffff; padding:1.6rem 3.5rem;
-  display:flex; justify-content:space-between; align-items:center;
-  border-top:1px solid var(--border);
-}
+.divider-section { background:var(--bg); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:3rem 3.5rem; text-align:center; }
+.divider-section p { font-family:'Space Mono',monospace; font-size:0.82rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-3); margin:0; }
+.use-case-section { background:var(--grad-v); padding:6rem 3.5rem; color:#fff; }
+.use-case-section h2 { color:#fff; margin-top:0; }
+.use-case-section h3 { font-family:'DM Serif Display',serif; font-size:clamp(1.8rem,3vw,2.6rem); color:#fff; line-height:1.2; margin-bottom:0.5rem; }
+.use-case-section .eyebrow { font-family:'Space Mono',monospace; font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.65); margin-bottom:1rem; }
+.use-case-section p { color:rgba(255,255,255,0.88); margin-bottom:1.1rem; }
+.use-case-section p:last-of-type { margin-bottom:0; }
+.uc-block { background:rgba(255,255,255,0.1); border-radius:12px; padding:2rem 2.5rem; margin-top:2.5rem; }
+.uc-block h2 { color:#fff; font-size:1.3rem; margin-top:0; margin-bottom:0.75rem; }
+.read-more { display:inline-block; margin-top:2.5rem; font-family:'Space Mono',monospace; font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:2px; transition:border-color 0.2s; }
+.read-more:hover { border-color:#fff; }
+footer { background:#ffffff; padding:1.6rem 3.5rem; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border); }
 .footer-logo img { height:72px; display:block; }
-footer p { font-size:0.78rem; color:var(--text-3); }
-
+footer p { font-size:0.78rem; color:var(--text-3); margin:0; }
 @media(max-width:900px) {
   nav { padding:0.4rem 1.5rem; }
   .nav-links { display:none; }
   section { padding:4rem 1.5rem; }
-  .audiences-section { padding-top:8rem; }
+  .intro-section { padding-top:8rem; }
+  .divider-section { padding:2rem 1.5rem; }
   footer { flex-direction:column; gap:1rem; text-align:center; padding:2rem; }
 }
 </style>
@@ -121,28 +98,64 @@ footer p { font-size:0.78rem; color:var(--text-3); }
   </div>
 </nav>
 
-<section class="audiences-section">
+<section class="intro-section">
   <div class="max-w">
     <div class="section-label">
       <span class="grad-line"></span><span class="grad-text">For Pharma &amp; Device</span>
     </div>
-    <h2>Regulatory-grade evidence.<br>A fraction of the timeline.</h2>
-    <p class="sub">Traditional data licensing takes 12 to 30 months and still leaves exposure around data provenance and patient consent. NexusRWE generates the same quality of evidence with a cleaner legal footprint and a built-in audit trail formatted for submission.</p>
-    <div class="use-cases">
-      <div class="use-case-list">
-        <div class="use-case-item"><span class="uc-dot"></span><div><strong>Post-market safety surveillance</strong> - Continuous monitoring across a live hospital network, without waiting for periodic data pulls.</div></div>
-        <div class="use-case-item"><span class="uc-dot"></span><div><strong>External control arms</strong> - Generate a comparison population from real-world data to support device submissions where a randomized trial is impractical.</div></div>
-        <div class="use-case-item"><span class="uc-dot"></span><div><strong>AI/ML model validation</strong> - Validate algorithms across geographically distributed patient populations without centralizing any data.</div></div>
-      </div>
+    <h1>The evidence you need already exists. The problem is getting to it.</h1>
+    <p>Every day, hospitals generate outcomes data, safety signals, and real-world performance records that could support your submissions. That evidence sits behind firewalls. Not because it does not exist, but because the infrastructure to reach it safely did not exist. Until now.</p>
+  </div>
+</section>
+
+<section class="main-section">
+  <div class="max-w">
+    <h2>Regulatory-grade evidence. A fraction of the timeline.</h2>
+    <p>Traditional data licensing takes 12 to 30 months and still leaves exposure around data provenance and patient consent. NexusRWE generates the same quality of evidence with a cleaner legal footprint and a built-in audit trail formatted for submission.</p>
+
+    <h2>Where NexusRWE creates value for sponsors:</h2>
+    <div class="use-case-list">
+      <div class="use-case-item"><span class="uc-dot"></span><div><strong>Post-market safety surveillance</strong> - Continuous monitoring across a live hospital network, without waiting for periodic data pulls or registry updates.</div></div>
+      <div class="use-case-item"><span class="uc-dot"></span><div><strong>External control arms</strong> - Generate a comparison population from real-world data to support device submissions where a randomized trial is impractical.</div></div>
+      <div class="use-case-item"><span class="uc-dot"></span><div><strong>Natural history studies</strong> - Characterize disease progression across distributed patient populations without moving a single record.</div></div>
+      <div class="use-case-item"><span class="uc-dot"></span><div><strong>Label expansion</strong> - Generate evidence to support new indications using real-world data without centralizing patient records.</div></div>
+      <div class="use-case-item"><span class="uc-dot"></span><div><strong>AI/ML model validation</strong> - Validate algorithms across geographically distributed patient populations without centralizing any data.</div></div>
     </div>
+
     <a href="https://docs.google.com/forms/d/1RJOTHhJAT2mv4seBjMcL0PbOT0lPNAH2dz4hha_eQss/viewform" target="_blank" class="btn btn-grad">Schedule a Call</a>
-    <a href="use-case-1.html" style="display:block; margin-top:2rem; text-decoration:none; color:inherit;">
-      <div style="background:var(--teal-xlt); border:1px solid var(--border); padding:1.5rem 1.75rem; border-radius:12px;">
-        <p style="font-family:'Space Mono',monospace; font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--teal-dk); margin-bottom:0.4rem;">A Post-Market Safety Study &rarr;</p>
-        <h4 style="line-height:1.3; margin-bottom:0.4rem; color:var(--text);">A safety signal becomes submission-ready evidence, without moving a single patient record.</h4>
-        <p style="color:var(--text-3); font-size:0.95rem;">Post-market safety study built for ICH M14</p>
-      </div>
-    </a>
+  </div>
+</section>
+
+<div class="divider-section">
+  <p>See it in action</p>
+</div>
+
+<section class="use-case-section">
+  <div class="max-w">
+    <p class="eyebrow">Use Case 1 &middot; Built for ICH M14</p>
+    <h3>A Post-Market Safety Study</h3>
+
+    <div class="uc-block">
+      <h2>What this looks like in practice</h2>
+      <p>A pharma sponsor has a cardiovascular drug on the market. Spontaneous reports suggest elevated stroke risk in patients over 75. Under ICH M14, they need a structured pharmacoepidemiological study across multiple health systems - fast, defensible, and submission-ready.</p>
+    </div>
+
+    <div class="uc-block">
+      <h2>The old way</h2>
+      <p>Negotiate data use agreements with five hospital systems. Sign HIPAA agreements. Wait for IRB approvals. Export patient records to a central server. Run the analysis. Reformat everything manually for submission. That's 12 to 30 months and seven figures spent - with patient data sitting outside the hospitals where it was generated.</p>
+    </div>
+
+    <div class="uc-block">
+      <h2>With NexusRWE</h2>
+      <p>The sponsor submits a locked study protocol. Each hospital approves it through their own governance process. The analysis runs locally inside each hospital - patient data never moves. When the privacy budget is spent, the system stops automatically. Encrypted results are returned - each one traceable to its source. The platform generates a submission-ready evidence package automatically.</p>
+    </div>
+
+    <div class="uc-block">
+      <h2>The outcome</h2>
+      <p>Months, not years. No data ever leaves the hospital. Every step is auditable and traceable.</p>
+    </div>
+
+    <a href="use-case-1.html" class="read-more">Read the full case study &rarr;</a>
   </div>
 </section>
 
