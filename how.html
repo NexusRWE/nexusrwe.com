@@ -66,7 +66,23 @@ footer p { font-size:0.78rem; color:var(--text-3); }
   .step { border-right:none; border-bottom:1px solid rgba(255,255,255,0.1); }
   footer { flex-direction:column; gap:1rem; text-align:center; padding:2rem; }
 }
-</style>
+
+/* Hamburger nav */
+.nav-hamburger { display:none; flex-direction:column; justify-content:space-between; width:24px; height:18px; background:none; border:none; cursor:pointer; padding:0; flex-shrink:0; }
+.nav-hamburger span { display:block; width:100%; height:2px; background:var(--text); border-radius:2px; transition:all 0.25s; }
+.nav-hamburger.open span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity:0; }
+.nav-hamburger.open span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+@media(max-width:900px) {
+  .nav-logo img { height:72px; }
+  .nav-hamburger { display:flex; }
+  .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(255,255,255,0.98); backdrop-filter:blur(10px); flex-direction:column; align-items:flex-start; padding:1.5rem 1.5rem 2rem; gap:1.2rem; border-bottom:1px solid var(--border); box-shadow:0 8px 24px rgba(0,0,0,0.08); }
+  .nav-links.open { display:flex !important; }
+  .nav-links a { font-size:1rem; padding:0.35rem 0; }
+  .btn { display:block; width:100%; text-align:center; box-sizing:border-box; }
+  .cta-row { flex-direction:column; }
+  .uc-block { padding:1.5rem; }
+}</style>
 </head>
 <body>
 
@@ -75,14 +91,15 @@ footer p { font-size:0.78rem; color:var(--text-3); }
     <a href="index.html"><img src="nexusIcon.png" alt="NexusRWE"></a>
   </div>
   <div class="nav-links">
-    <a href="problem.html">Problem</a>
+    <a href="problem.html">Why Now</a>
     <a href="how.html" class="active">How It Works</a>
     <a href="pharma.html">For Pharma</a>
     <a href="hospitals.html">For Hospitals</a>
-    <a href="team.html">Team</a>
+    <a href="team.html">About Us</a>
     <a href="investors.html">Investors</a>
     <a href="https://docs.google.com/forms/d/1RJOTHhJAT2mv4seBjMcL0PbOT0lPNAH2dz4hha_eQss/viewform" target="_blank" class="nav-cta">Schedule a Call</a>
   </div>
+<button class="nav-hamburger" onclick="toggleNav()" aria-label="Toggle menu"><span></span><span></span><span></span></button>
 </nav>
 
 <section class="how" id="how">
@@ -125,5 +142,9 @@ footer p { font-size:0.78rem; color:var(--text-3); }
   <p>&copy; 2026 NexusRWE. All rights reserved.</p>
 </footer>
 
+<script>
+function toggleNav(){var l=document.querySelector('.nav-links'),b=document.querySelector('.nav-hamburger');l.classList.toggle('open');b.classList.toggle('open');}
+document.addEventListener('click',function(e){if(!document.querySelector('nav').contains(e.target)){var l=document.querySelector('.nav-links'),b=document.querySelector('.nav-hamburger');if(l){l.classList.remove('open');}if(b){b.classList.remove('open');}}});
+</script>
 </body>
 </html>
