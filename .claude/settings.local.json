@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk NR>=340 && NR<=360 *)",
+      "Bash(awk *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(git merge *)",
+      "Bash(sed -n '393,403p' C:/Users/sandy/nexusrwe.com/index.html)",
+      "Bash(sed -n '614,617p' C:/Users/sandy/nexusrwe.com/index.html)",
+      "Bash(git checkout *)",
+      "Bash(sed -n '42,110p' C:/Users/sandy/nexusrwe.com/team.html)",
+      "Bash(sed -n '47,97p' C:/Users/sandy/nexusrwe.com/investors.html)",
+      "Bash(git commit *)",
+      "Bash(npx *)",
+      "Bash(Start-Sleep -Seconds 3)",
+      "Bash(Get-Content \"C:\\\\Users\\\\sandy\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-sandy-nexusrwe-com\\\\b06932d6-1662-4997-afa7-030fbba5dc19\\\\tasks\\\\bngqxgy7z.output\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Start-Process \"http://localhost:3000\")",
+      "WebFetch(domain:localhost)",
+      "WebFetch(domain:nexusrwe.com)"
+    ]
+  }
+}
